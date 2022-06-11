@@ -21,7 +21,7 @@ def connect():
     finally:
         if conn is not None:
             conn.close()
-            print('Database connection closed.')
+            print('kubranur.')
 
 # def student_login():
 
