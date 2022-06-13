@@ -1,29 +1,12 @@
-import psycopg2
-def connect():
-    try:
-        """ Connect to the PostgreSQL database server """
-        conn = psycopg2.connect(
-            host="localhost",
-            database="school-management-system",
-            user="postgres",
-            password="12345")
-        cur = conn.cursor()
-        cur.execute("""
-            select student_password from students
-            where students_no=123
-            """)
-        info = cur.fetchone()
-        print(info[0]=='234')
-        cur.close()
-        conn.commit()
-    except (Exception) as error:
-        print(error)
-    finally:
-        if conn is not None:
-            conn.close()
-            print('kubranur.')
-
-# def student_login():
-
-if __name__ == '__main__':
-    connect()
+from PyQt5 import QtWidgets,uic
+import windowOne
+class student_entry(QtWidgets.QMainWindow):
+        def __init__(self):
+            super(student_entry, self).__init__()
+            uic.loadUi('ui/studentLoginPage.ui', self)
+            self.backbutton.clicked.connect(self.entry_show)
+        
+        def entry_show(self):
+            self.inci=windowOne.login()
+            self.inci.show()
+            self.close()
