@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>student_entry</class>
  <widget class="QMainWindow" name="student_entry">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -33,7 +36,7 @@
     <property name="geometry">
      <rect>
       <x>310</x>
-      <y>320</y>
+      <y>350</y>
       <width>171</width>
       <height>28</height>
      </rect>
@@ -42,7 +45,7 @@
      <string>LOGIN</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="studentName">
+   <widget class="QLineEdit" name="studentNumber">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -79,6 +82,19 @@
     </property>
     <property name="text">
      <string>BACK</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sLoginPageLabel">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>320</y>
+      <width>331</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
     </property>
    </widget>
   </widget>

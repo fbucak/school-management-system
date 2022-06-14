@@ -1,9 +1,9 @@
 from PyQt5 import QtWidgets
 import sys
-import windowOne
-
-
+from DbConnect import DBConnection
+import Login
 
 app = QtWidgets.QApplication(sys.argv)
-window = windowOne.login()
+db=DBConnection()
+window = Login.login(db)
 app.exec_()

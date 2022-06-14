@@ -1,27 +1,28 @@
 from PyQt5 import QtWidgets,uic
-import student
-import teacher
+import studentLogin
+import teacherLogin
+from DbConnect import DBConnection
 
 
 class login(QtWidgets.QMainWindow):
     
-    def __init__(self):
+    def __init__(self,db):
         super(login, self).__init__()
         uic.loadUi('ui/loginpage.ui', self)
+        self.db=db
         self.forStudent.clicked.connect(self.StudentLoginPage)
         self.forTeacher.clicked.connect(self.TeacherLoginPage)
         self.show()
 
     def StudentLoginPage (self):
-        self.inci=student.student_entry()
+        self.inci=studentLogin.student_entry(self.db)
         self.inci.show()
         self.close()
-        #self.tabWidget.setCurrentIndex(5)
         
 
     def TeacherLoginPage(self):
-        self.inci=teacher.teacher_entry()
+        self.inci=teacherLogin.teacher_entry(self.db)
         self.inci.show()
         self.close()
-        #self.tabWidget.setCurrentIndex(3)
+        
         
