@@ -9,8 +9,7 @@ class DBConnection():
                 database="school-management-system",
                 user="postgres",
                 password="12345")
-            cur = conn.cursor()
-            self.connection=cur
+            self.connection=conn
             # cur.close()
             # conn.commit()
         except (Exception) as error:
@@ -20,12 +19,15 @@ class DBConnection():
         #         conn.close()
     def checkStudent(self,students_no,password):
         try:
-            self.connection.execute("""
+            cursor=self.connection.cursor()
+            cursor.execute("""
             select * from students where students_no={} and student_password='{}' """.format(students_no,password),
             )
-        except:
-            return False
-        else:
-            student = self.connection.fetchall()
+            student=cursor.fetchall()
             return len(student)!=0
+        except Exception as e:
+            print(e)
+            return False
+        
+            
            

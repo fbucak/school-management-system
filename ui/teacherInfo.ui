@@ -30,7 +30,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-20</y>
+      <y>-30</y>
       <width>800</width>
       <height>600</height>
      </rect>
@@ -177,21 +177,11 @@
        <string>Teacher's Name</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="tNameLine">
-      <property name="geometry">
-       <rect>
-        <x>180</x>
-        <y>120</y>
-        <width>161</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
      <widget class="QLabel" name="lNameLabel">
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>190</y>
+        <y>230</y>
         <width>81</width>
         <height>31</height>
        </rect>
@@ -203,8 +193,8 @@
      <widget class="QLineEdit" name="lAddorDeleteLine">
       <property name="geometry">
        <rect>
-        <x>180</x>
-        <y>190</y>
+        <x>210</x>
+        <y>220</y>
         <width>161</width>
         <height>31</height>
        </rect>
@@ -213,7 +203,7 @@
      <widget class="QPushButton" name="lAddButton">
       <property name="geometry">
        <rect>
-        <x>180</x>
+        <x>210</x>
         <y>270</y>
         <width>91</width>
         <height>31</height>
@@ -226,7 +216,7 @@
      <widget class="QPushButton" name="lDeleteButton">
       <property name="geometry">
        <rect>
-        <x>290</x>
+        <x>320</x>
         <y>270</y>
         <width>91</width>
         <height>31</height>
@@ -247,6 +237,71 @@
       </property>
       <property name="text">
        <string>Exit</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lNameLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>340</y>
+        <width>151</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Lesson Information</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lessonName">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>340</y>
+        <width>161</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>fizik</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="showButton">
+      <property name="geometry">
+       <rect>
+        <x>210</x>
+        <y>380</y>
+        <width>91</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Show</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lNameLabel_3">
+      <property name="geometry">
+       <rect>
+        <x>470</x>
+        <y>220</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>All Lesson that You have</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="tNameLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>120</y>
+        <width>141</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>name</string>
       </property>
      </widget>
     </widget>

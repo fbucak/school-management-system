@@ -2,7 +2,7 @@ from PyQt5 import QtWidgets,uic,QtGui
 import studentLogin
 import teacherLogin
 from PyQt5.QtWidgets import QPushButton
-
+import Lesson
 
 lessons=["Matematik","Fizik","Kimya"]
 class teacherInfoScreen(QtWidgets.QMainWindow):
@@ -12,6 +12,7 @@ class teacherInfoScreen(QtWidgets.QMainWindow):
         uic.loadUi('ui/teacherInfo.ui', self)
         self.db=db
         self.teacherExit.clicked.connect(self.teacherInfoExit)
+        self.showButton.clicked.connect(self.goToLessonPage)
         # self.forStudent.clicked.connect(self.StudentLoginPage)
         # self.forTeacher.clicked.connect(self.TeacherLoginPage)
         self.show()
@@ -29,6 +30,10 @@ class teacherInfoScreen(QtWidgets.QMainWindow):
 
     def TeacherLoginPage(self):
         self.inci=teacherLogin.teacher_entry(self.db)
+        self.inci.show()
+        self.close()
+    def goToLessonPage(self):
+        self.inci=Lesson.lesson(self.db,self.lessonName.text())
         self.inci.show()
         self.close()
    

@@ -129,11 +129,11 @@
      </widget>
     </widget>
     <widget class="QWidget" name="teacher_info">
-     <widget class="QLabel" name="label_4">
+     <widget class="QLabel" name="lessonTitle">
       <property name="geometry">
        <rect>
-        <x>150</x>
-        <y>70</y>
+        <x>110</x>
+        <y>80</y>
         <width>311</width>
         <height>31</height>
        </rect>
@@ -174,6 +174,101 @@
         <height>231</height>
        </rect>
       </property>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
+      <row>
+       <property name="text">
+        <string>Yeni Satır</string>
+       </property>
+      </row>
       <column>
        <property name="text">
         <string>Student Name:</string>
@@ -185,17 +280,20 @@
        </property>
       </column>
      </widget>
-     <widget class="QLineEdit" name="lAddorDeleteLine">
+     <widget class="QLineEdit" name="sNoLine">
       <property name="geometry">
        <rect>
         <x>180</x>
         <y>180</y>
-        <width>161</width>
+        <width>71</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
        <string/>
+      </property>
+      <property name="placeholderText">
+       <string>S.No</string>
       </property>
      </widget>
      <widget class="QPushButton" name="lAddButton">
@@ -315,7 +413,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Student</string>
+       <string>Student No</string>
       </property>
      </widget>
      <widget class="QPushButton" name="lDeleteButton_2">
@@ -331,7 +429,7 @@
        <string>Edit Grade</string>
       </property>
      </widget>
-     <widget class="QLineEdit" name="sAddorDeleteLine_2">
+     <widget class="QLineEdit" name="gStudentId">
       <property name="geometry">
        <rect>
         <x>180</x>
@@ -345,6 +443,22 @@
       </property>
       <property name="placeholderText">
        <string>S.No</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="subjectIdLine">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>180</y>
+        <width>71</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="placeholderText">
+       <string>Subject Id</string>
       </property>
      </widget>
     </widget>

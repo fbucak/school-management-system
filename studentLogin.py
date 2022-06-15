@@ -19,7 +19,7 @@ class student_entry(QtWidgets.QMainWindow):
             number=self.studentNumber.text()
             password=self.studentPassword.text()
             if self.db.checkStudent(number,password):
-                self.inci=studentInfo.studentInfoScreen(self.db)
+                self.inci=studentInfo.studentInfoScreen(self.db,number)
                 self.inci.show()
                 self.close()
             else:
