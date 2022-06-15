@@ -33,7 +33,7 @@
      <string notr="true">background-color: rgb(177, 188, 230)</string>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="login">
      <widget class="QPushButton" name="pushButton">
@@ -74,7 +74,6 @@
       <property name="font">
        <font>
         <pointsize>17</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -141,7 +140,6 @@
       <property name="font">
        <font>
         <pointsize>15</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -402,7 +400,6 @@
       <property name="font">
        <font>
         <pointsize>15</pointsize>
-        <weight>75</weight>
         <bold>true</bold>
        </font>
       </property>
@@ -500,7 +497,7 @@
      <x>0</x>
      <y>0</y>
      <width>852</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>

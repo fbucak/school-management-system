@@ -18,12 +18,15 @@ class student_entry(QtWidgets.QMainWindow):
         def studentCheck(self):
             number=self.studentNumber.text()
             password=self.studentPassword.text()
-            if self.db.checkStudent(number,password):
-                self.inci=studentInfo.studentInfoScreen(self.db)
+            self.student=self.db.checkStudent(number,password)
+            if self.student==[]:
+                self.sLoginPageLabel.setText("Wrong Password or Student Number")
+                
+            else:
+                self.inci=studentInfo.studentInfoScreen(self.student)
                 self.inci.show()
                 self.close()
-            else:
-                self.sLoginPageLabel.setText("Wrong Password or Student Number")
+                
 
 
 
