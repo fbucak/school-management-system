@@ -28,6 +28,19 @@ class DBConnection():
         except Exception as e:
             print(e)
             return False
+    def checkTeacher(self,Tusername,Tpassword):
+        try:
+            cursor=self.connection.cursor()
+            cursor.execute("""
+            select * from teachers where username='{}' and teacher_password='{}' """.format(Tusername,Tpassword),
+            )
+            teacher = cursor.fetchall()
+            return len(teacher)!=0
+        except Exception as e:
+            print(e)
+            return False
+    
+
         
             
            

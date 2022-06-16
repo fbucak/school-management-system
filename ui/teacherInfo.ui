@@ -262,7 +262,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>fizik</string>
+       <string/>
       </property>
      </widget>
      <widget class="QPushButton" name="showButton">

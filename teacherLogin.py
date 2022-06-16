@@ -15,7 +15,12 @@ class teacher_entry(QtWidgets.QMainWindow):
             self.inci.show()
             self.close()
         def teacherInfo_show(self):
-            self.inci=teacherInfo.teacherInfoScreen(self.db)
-            self.inci.show()
-            self.close()
+            tnumber=self.teacherName.text()
+            tpassword=self.teacherPassword.text()
+            if self.db.checkTeacher(tnumber,tpassword):
+                self.inci=teacherInfo.teacherInfoScreen(self.db,tnumber)
+                self.inci.show()
+                self.close()
+            else:
+                self.tLoginPageLabel.setText("Wrong Password or Username")
        
