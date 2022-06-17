@@ -7,10 +7,11 @@ import Lesson
 lessons=["Matematik","Fizik","Kimya"]
 class teacherInfoScreen(QtWidgets.QMainWindow):
     
-    def __init__(self,db):
+    def __init__(self,db,tnumber):
         super(teacherInfoScreen, self).__init__()
         uic.loadUi('ui/teacherInfo.ui', self)
         self.db=db
+        self.tnumber=tnumber
         self.teacherExit.clicked.connect(self.teacherInfoExit)
         self.showButton.clicked.connect(self.goToLessonPage)
         # self.forStudent.clicked.connect(self.StudentLoginPage)

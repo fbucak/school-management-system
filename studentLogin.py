@@ -25,9 +25,3 @@ class student_entry(QtWidgets.QMainWindow):
             else:
                 self.sLoginPageLabel.setText("Wrong Password or Student Number")
 
-
-
-            
-
-
-            

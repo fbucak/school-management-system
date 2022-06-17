@@ -8,7 +8,7 @@ class DBConnection():
                 host="localhost",
                 database="school-management-system",
                 user="postgres",
-                password="12345")
+                password="981")
             self.connection=conn
             # cur.close()
             # conn.commit()
@@ -21,13 +21,22 @@ class DBConnection():
         try:
             cursor=self.connection.cursor()
             cursor.execute("""
-            select * from students where students_no={} and student_password='{}' """.format(students_no,password),
+            select * from students where students_no='{}' and student_password='{}' """.format(students_no,password),
             )
             student=cursor.fetchall()
             return len(student)!=0
         except Exception as e:
             print(e)
             return False
-        
-            
-           
+
+    def checkTeacher(self,Tusername,Tpassword):
+        try:
+            cursor=self.connection.cursor()
+            cursor.execute("""
+            select * from teachers where username='{}' and teacher_password='{}' """.format(Tusername,Tpassword),
+            )
+            teacher = cursor.fetchall()
+            return len(teacher)!=0
+        except Exception as e:
+            print(e)
+            return False
