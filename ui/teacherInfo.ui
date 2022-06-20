@@ -30,12 +30,18 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>-30</y>
+      <y>0</y>
       <width>800</width>
       <height>600</height>
      </rect>
     </property>
     <property name="minimumSize">
+     <size>
+      <width>800</width>
+      <height>600</height>
+     </size>
+    </property>
+    <property name="maximumSize">
      <size>
       <width>800</width>
       <height>600</height>
@@ -173,6 +179,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Teacher's Name</string>
       </property>
@@ -181,10 +192,15 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>230</y>
+        <y>220</y>
         <width>81</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Lesson</string>
@@ -209,6 +225,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Add Lesson</string>
       </property>
@@ -221,6 +242,11 @@
         <width>91</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Delete Lesson</string>
@@ -235,6 +261,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Exit</string>
       </property>
@@ -247,6 +278,11 @@
         <width>151</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Lesson Information</string>
@@ -274,6 +310,11 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Show</string>
       </property>
@@ -281,11 +322,16 @@
      <widget class="QLabel" name="lNameLabel_3">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>460</x>
         <y>220</y>
         <width>301</width>
         <height>31</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>All Lesson that You have</string>
@@ -300,8 +346,31 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>name</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lNameLabel_4">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>180</y>
+        <width>301</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Your Lessons</string>
       </property>
      </widget>
     </widget>
@@ -450,16 +519,6 @@
      </widget>
     </widget>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>26</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

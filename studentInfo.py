@@ -28,9 +28,10 @@ class studentInfoScreen(QtWidgets.QMainWindow):
             self.sNoLabel.setText(str(self.student[0][0]))
     def getGrades(self):
             cursor=self.db.connection.cursor()
-            cursor.execute("""select subjects.subject_name,grades.grade from subjects
-inner join grades on subjects.subject_id=grades.subject_id
-inner join students on students.student_id=grades.student_id
+            cursor.execute("""select subjects.subject_name,grades.grade from students
+full join student_subject on student_subject.student_id=students.student_id
+full join subjects on subjects.subject_id=student_subject.subject_id
+full join grades on grades.subject_id=subjects.subject_id
 where students_no={} """.format(self.number),
             )
             self.student=cursor.fetchall()

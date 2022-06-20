@@ -9,6 +9,7 @@ class student_entry(QtWidgets.QMainWindow):
             self.backbutton.clicked.connect(self.entry_show)
             self.studentLoginButton.clicked.connect(self.studentCheck)
             
+            
         
         def entry_show(self):
             self.inci=Login.login(self.db)
@@ -24,6 +25,7 @@ class student_entry(QtWidgets.QMainWindow):
                 self.close()
             else:
                 self.sLoginPageLabel.setText("Wrong Password or Student Number")
+                self.db.checkStudent(number,password)
 
 
 

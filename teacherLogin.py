@@ -23,4 +23,5 @@ class teacher_entry(QtWidgets.QMainWindow):
                 self.close()
             else:
                 self.tLoginPageLabel.setText("Wrong Password or Username")
+                self.db.checkTeacher(tnumber,tpassword)
        
