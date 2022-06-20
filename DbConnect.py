@@ -39,6 +39,40 @@ class DBConnection():
         except Exception as e:
             print(e)
             return False
+    def getStudentId(self,studentNo):
+        try:
+            cursor=self.connection.cursor()
+            cursor.execute("""
+            select student_id from students where students_no='{}' """.format(studentNo)
+            )
+            studentId = cursor.fetchone()
+            return studentId[0]
+        except Exception as e:
+            print(e)
+            return False
+    def getTeacherId(self,username):
+        try:
+            cursor=self.connection.cursor()
+            cursor.execute("""
+            select teacher_id from teachers where username='{}' """.format(username)
+            )
+            teacherId = cursor.fetchone()
+            return teacherId[0]
+        except Exception as e:
+            print(e)
+            return False
+
+    def getSubjectId(self,subjectName):
+        try:
+            cursor=self.connection.cursor()
+            cursor.execute("""
+            select subject_id from subjects where subject_name='{}' """.format(subjectName)
+            )
+            subjectId = cursor.fetchone()
+            return subjectId[0]
+        except Exception as e:
+            print(e)
+            return False
     
 
         

@@ -6,9 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>852</width>
-    <height>631</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
@@ -17,7 +23,7 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>-10</x>
       <y>0</y>
       <width>800</width>
       <height>600</height>
@@ -155,9 +161,9 @@
      <widget class="QPushButton" name="sListButton">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>330</y>
-        <width>151</width>
+        <x>50</x>
+        <y>310</y>
+        <width>101</width>
         <height>31</height>
        </rect>
       </property>
@@ -165,118 +171,38 @@
        <string>Student List:</string>
       </property>
      </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="tableWidget_Student">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>330</y>
-        <width>391</width>
+        <x>160</x>
+        <y>310</y>
+        <width>621</width>
         <height>231</height>
        </rect>
       </property>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>Yeni Satır</string>
-       </property>
-      </row>
       <column>
        <property name="text">
-        <string>Student Name:</string>
+        <string>Student No</string>
        </property>
       </column>
       <column>
        <property name="text">
-        <string>Grades:</string>
+        <string>Student Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Student Surname</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Subject Name</string>
+       </property>
+      </column>
+      <column>
+       <property name="text">
+        <string>Grade</string>
        </property>
       </column>
      </widget>
@@ -296,7 +222,7 @@
        <string>S.No</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="lAddButton">
+     <widget class="QPushButton" name="addGradeButton">
       <property name="geometry">
        <rect>
         <x>370</x>
@@ -309,7 +235,7 @@
        <string>Add Grade</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="lDeleteButton">
+     <widget class="QPushButton" name="deleteGradeButton">
       <property name="geometry">
        <rect>
         <x>480</x>
@@ -381,26 +307,26 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>280</y>
+        <y>270</y>
         <width>501</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>actInfoLabel</string>
+       <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="sDeleteButton_2">
+     <widget class="QPushButton" name="LessonBackButton">
       <property name="geometry">
        <rect>
         <x>680</x>
-        <y>520</y>
+        <y>550</y>
         <width>91</width>
         <height>31</height>
        </rect>
       </property>
       <property name="text">
-       <string>Exit</string>
+       <string>Back</string>
       </property>
      </widget>
      <widget class="QLabel" name="sNameLabel_2">
@@ -443,22 +369,6 @@
       </property>
       <property name="placeholderText">
        <string>S.No</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="subjectIdLine">
-      <property name="geometry">
-       <rect>
-        <x>270</x>
-        <y>180</y>
-        <width>71</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-      <property name="placeholderText">
-       <string>Subject Id</string>
       </property>
      </widget>
     </widget>
@@ -607,16 +517,6 @@
      </widget>
     </widget>
    </widget>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>852</width>
-     <height>26</height>
-    </rect>
-   </property>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
