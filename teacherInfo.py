@@ -35,9 +35,19 @@ class teacherInfoScreen(QtWidgets.QMainWindow):
         self.inci.show()
         self.close()
     def goToLessonPage(self):
-        self.inci=Lesson.lesson(self.db,self.lessonName.text(),self.tnumber)
-        self.inci.show()
-        self.close()
+        ###
+        print(self.teacherInf,"hello")
+        lessons=[x[1] for x in self.teacherInf] 
+        lessonNAME=self.lessonName.text()
+        if lessonNAME in lessons:
+            self.inci=Lesson.lesson(self.db,lessonNAME,self.tnumber)
+            self.inci.show()
+            self.close()
+        else:
+            self.lNameLabel_5.setText("This lesson is not yours.")
+            
+            
+        ###
     def getTeacherInfo(self):
         cursor=self.db.connection.cursor()
         cursor.execute("""select teachers.first_name,subjects.subject_name from teachers
@@ -53,7 +63,7 @@ where username='{}' """.format(self.tnumber)
             self.teacherLessons=""
             print(self.teacherInf)
             for i in range(len(self.teacherInf)):
-                self.teacherLessons=self.teacherLessons+self.teacherInf[i][1]+" "
+                self.teacherLessons=self.teacherLessons+self.teacherInf[i][1]+"\n"
             self.lNameLabel_3.setText(self.teacherLessons)
 
     def addLesson(self):
