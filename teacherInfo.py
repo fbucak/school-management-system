@@ -67,33 +67,40 @@ where username='{}' """.format(self.tnumber)
             self.lNameLabel_3.setText(self.teacherLessons)
 
     def addLesson(self):
-         
+         cursor=self.db.connection.cursor()
+         cursor.execute("""select subject_name from subjects """.format(self.tnumber)
+            )
+         self.all_lessons=cursor.fetchall()
+         lessons=[x[1] for x in self.teacherInf] 
          lessonName=self.lAddorDeleteLine.text()
          subjectId=self.db.getSubjectId(lessonName)
          teacherId=self.db.getTeacherId(self.tnumber)
-   
-         try:
+         if lessonName in lessons:
+            self.error_.setText("This lesson already exist")
+         elif lessonName not in self.all_lessons:
+             self.error_.setText("This lesson does not exist on lessons")
+         else:
             self.db.connection.cursor().execute("""insert into teacher_subject (teacher_id,subject_id)
 values({},{})""".format(teacherId,subjectId) )
             self.db.connection.commit()
-            
-         except:
-            print("Please check your subject id or student number")
          self.getTeacherInfo()
 
     def deleteLesson(self):
          lessonName=self.lAddorDeleteLine.text()
          subjectId=self.db.getSubjectId(lessonName)
          teacherId=self.db.getTeacherId(self.tnumber)
-         try:
+         lessons=[x[1] for x in self.teacherInf] 
+         if lessonName not in lessons:
+                self.error_.setText("This lesson is not on the list")
+         else:
             self.db.connection.cursor().execute("""delete from teacher_subject where teacher_id={} and subject_id={}
 """.format(teacherId,subjectId) )
             self.db.connection.commit()
-            
-            
-         except Exception as e :
-            print(e)
          self.getTeacherInfo()
+        
+            
+            
+        
 
     
 
