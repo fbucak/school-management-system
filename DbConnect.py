@@ -8,7 +8,7 @@ class DBConnection():
                 host="localhost",
                 database="school-management-system",
                 user="postgres",
-                password="981")
+                password="Merve3467.")
             self.connection=conn
             # cur.close()
             # conn.commit()
